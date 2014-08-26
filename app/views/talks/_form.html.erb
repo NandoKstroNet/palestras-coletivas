@@ -1,4 +1,5 @@
 <%= form_for(@talk, :url => url, :html => {:class => 'form-horizontal' }) do |f| %>
+  <%= render "shared/flash_messages" %>
   <%= render "shared/error_messages", :record => @talk %>
 
   <div class="form-group">
