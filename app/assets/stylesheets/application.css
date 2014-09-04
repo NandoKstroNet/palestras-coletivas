@@ -18,6 +18,7 @@
  *= require nav
  *= require talks
  *= require events
+ *= require login
  */
 
 .nav-agency {

@@ -1,40 +1,30 @@
-<div class="row-fluid">
-  <div class="span12">
-    <div class="page-header">
-      <div class="row-fluid">
-        <div class="span4">
-          <h1><%= t("titles.users.login") %></h1>
-        </div>
+
+
+<div class="container container-login">
+
+  <h1>Bem-vindo de volta!</h1>
+
+  <%= form_tag login_path, :html => {:class => 'form-horizontal' } do %>
+    <div class="row form-group">
+      <div class="col-md-12">
+        <%= email_field_tag :email, nil, placeholder: t("labels.user.email"), :class => "form-control input-lg" %>
       </div>
     </div>
-  </div>
-</div>
 
-<p class="text-warning">
-  <%= t("login.about_html", :url => new_user_path) %>
-</p>
-
-<%= form_tag login_path, :html => {:class => 'form-signin' } do %>
-  <div class="control-group">
-    <%= label_tag :email, t("labels.user.email"), :class => 'control-label' %>
-    <div class="controls">
-      <%= email_field_tag :email, nil, :class => "m-wrap m-ctrl-large" %>
+    <div class="row form-group">
+      <div class="col-md-12">
+        <%= password_field_tag :password, nil, placeholder: t("labels.user.password"), :class => "form-control input-lg" %>
+      </div>
     </div>
-  </div>
 
-  <div class="control-group">
-    <%= label_tag :password, t("labels.user.password"), :class => 'control-label' %>
-    <div class="controls">
-      <%= password_field_tag :password, nil, :class => "m-wrap m-ctrl-medium" %>
+    <div class="row form-group">
+      <div class="col-md-12">
+        <%= submit_tag t("form.submit.login"), :class => 'btn btn-primary btn-lg' %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
-  <div class="control-group">
+  <%= link_to t("new.user.forgotten_password"), new_password_reset_path, :class => 'm-btn black' %>
+
     <p>Ainda não possui conta? <a href="<%= new_user_path %>">Cadastre-se<a></p>
-  </div>
-
-  <div class="m-btn-strip">
-    <%= submit_tag t("form.submit.login"), :class => 'm-btn blue' %>
-    <%= link_to t("new.user.forgotten_password"), new_password_reset_path, :class => 'm-btn black' %>
-  </div>
-<% end %>
+</div>

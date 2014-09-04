@@ -1,35 +1,33 @@
-<%= form_for @user, :url => url do |f| %>
+<%= form_for @user, :url => url, :html => {:class => 'form-horizontal' } do |f| %>
   <%= render "shared/error_messages", :record => @user %>
 
-  <div class="control-group">
-    <%= f.label :name, t("labels.user.name"), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :name, :class => "m-wrap m-ctrl-large" %>
+  <div class="form-group">
+    <div class="col-md-12">
+      <%= f.text_field :name, placeholder: t("labels.user.name"), :class => "form-control input-lg" %>
     </div>
   </div>
 
-  <div class="control-group">
-    <%= f.label :email, t("labels.user.email"), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.email_field :email, :class => "m-wrap m-ctrl-large" %>
+  <div class="form-group">
+    <div class="col-md-12">
+      <%= f.email_field :email, placeholder: t("labels.user.email"), :class => "form-control input-lg" %>
     </div>
   </div>
 
-  <div class="control-group">
-    <%= f.label :password, t("labels.user.password"), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.password_field :password, :class => "m-wrap m-ctrl-small" %>
+  <div class="form-group">
+    <div class="col-md-12">
+      <%= f.password_field :password, placeholder: t("labels.user.password"), :class => "form-control input-lg" %>
     </div>
   </div>
 
-  <div class="control-group">
-    <%= f.label :password_confirmation, t("labels.user.password_confirmation"), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.password_field :password_confirmation, :class => "m-wrap m-ctrl-small" %>
+  <div class="form-group">
+    <div class="col-md-12">
+      <%= f.password_field :password_confirmation, placeholder: t("labels.user.password_confirmation"), :class => "form-control input-lg" %>
     </div>
   </div>
 
-  <div class="m-btn-strip">
-    <%= f.submit nil, :class => 'm-btn blue' %>
+  <div class="row form-group">
+    <div class="col-md-12">
+      <%= f.submit nil, :class => 'btn btn-primary btn-lg' %>
+    </div>
   </div>
 <% end %>

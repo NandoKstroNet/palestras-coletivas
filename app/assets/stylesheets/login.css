@@ -1,0 +1,15 @@
+.container-login{
+  width: 400px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.container-login h1{
+  font-weight: 90;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container-login .btn-lg{
+  width: 100%
+}
