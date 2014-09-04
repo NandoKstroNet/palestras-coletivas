@@ -1,15 +1,5 @@
-section#top {
-  height: 350px;
+section#top-talks{
   background: #2E8AF1;
-  text-align: center;
-  padding-top: 100px
-}
-
-section#top h1 {
-  color: #fff;
-  font-weight: 100;
-  font-size: 6em;
-  letter-spacing: 15px;
 }
 
 .box-talk{

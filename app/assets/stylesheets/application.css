@@ -17,6 +17,7 @@
  *= require animate
  *= require nav
  *= require talks
+ *= require events
  */
 
 .nav-agency {
@@ -80,4 +81,17 @@ section {
 .marketing-narrow {
   color: white;
   text-shadow: 0 1px 2px #000000;
+}
+
+section.top {
+  height: 400px;
+  text-align: center;
+  padding-top: 150px
+}
+
+section.top h1 {
+  color: #fff;
+  font-weight: 100;
+  font-size: 6em;
+  letter-spacing: 15px;
 }
