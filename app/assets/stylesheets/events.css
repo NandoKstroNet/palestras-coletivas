@@ -1,5 +1,5 @@
 section#top-events{
-  background: #9C00A8;
+  background: #E59400;
 }
 
 .navbar-event{
@@ -16,7 +16,7 @@ div.box-event{
 
 div.box-event .box-event-header{
   height: 100px;
-  background: #E59400;
+  background: #404040;
   padding: 10px;
 }
 
